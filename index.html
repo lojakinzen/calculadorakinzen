@@ -1,0 +1,1717 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	
+<link rel='stylesheet' id='understrap-styles-css' media='all' />
+  
+  
+  
+<script src='https://rotalunar.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+  
+  
+  </head>
+
+	<style>
+    body{
+      background-color: #1F003D;
+       color: white;
+    }
+       
+font color="#800080">
+  </style>
+
+
+			<div class="row">
+
+				<div class="col-lg-6 mt-3 text-center pr-lg-0">
+
+					<div class="">
+
+							<span>Calculadora 👽 Kin Zen </span><br><br>
+
+						</h1>                        
+
+					</div>
+
+					<div id="calculakin-inputdatas" class="px-sm-2 mx-auto">
+
+                        <div id="calculakin-anel">
+
+                            <a href="#" class="kin">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                    <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                    <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                </svg>
+
+                            </a>
+
+                            <span id="nome-anel" class="ml-2"></span>
+
+                        </div>
+
+						<div id="calculakin-inputgroup-gregoriano" class="mb-3 float-sm-left inputgroup-bordas">
+
+							<label id="calculakin-label-gregoriano" class="mb-0 text-center" for="">Calendário
+
+								Gregoriano</label>
+
+							<input
+
+								class="form-control px-0 text-center input-transparente primeiro-input-bordas border-right-0"
+
+								type="number" id="calculakin-gregoriano-dia">
+
+							<input
+
+								class="form-control px-0 text-center input-transparente rounded-0 border-right-0 border-left-0"
+
+								type="number" id="calculakin-gregoriano-mes">
+
+							<input
+
+								class="form-control text-center input-transparente rounded-0 border-left-0"
+
+								type="number" id="calculakin-gregoriano-ano">
+
+								<button class="btn btn-primary btn-sm" type="button"><i class="fa fa-chevron-right"></i></button>
+
+							<a href="#" title="hoje" id="calculakin-hoje">
+
+								<i class="fa fa-calendar-check-o"></i>
+
+							</a>
+
+						</div>
+
+						<div id="calculakin-inputgroup-sincronario" class="mb-3 float-sm-right inputgroup-bordas">
+
+							<label id="calculakin-label-sincronario" class="mb-0 text-center" for="">Sincronário | <span id="data-ns"></span><small class="h6 ml-1"><a href="https://blog.kinzen.com.br/"><i class="fa fa-question-circle"></i></a></small></label>
+
+							<input class="form-control px-1 text-center input-transparente  primeiro-input-bordas"
+
+								id="calculakin-sincronario-ns" tabindex="5" type="number" min="1">
+
+                            <input class="form-control px-1 text-center input-transparente  rounded-0"
+
+								id="calculakin-sincronario-ano" tabindex="5" type="number" min="1">
+
+							<select class="date-calc-mes form-control rounded-0 px-1 text-center input-transparente"
+
+								id="calculakin-sincronario-lua" tabindex="6">
+
+								<option value="1">Lua 1 - Magnética</option>
+
+								<option value="2">Lua 2 - Lunar</option>
+
+								<option value="3">Lua 3 - Elétrica</option>
+
+								<option value="4">Lua 4 - Autoexistente</option>
+
+								<option value="5">Lua 5 - Harmônica</option>
+
+								<option value="6">Lua 6 - Rítmica</option>
+
+								<option value="7">Lua 7 - Ressonante</option>
+
+								<option value="8">Lua 8 - Galáctica</option>
+
+								<option value="9">Lua 9 - Solar</option>
+
+								<option value="10">Lua 10 - Planetária</option>
+
+								<option value="11">Lua 11 - Espectral</option>
+
+								<option value="12">Lua 12 - Cristal</option>
+
+								<option value="13">Lua 13 - Cósmica</option>
+
+								<option value="0">Dia Fora do Tempo</option>
+
+							</select>
+
+                            <input class="form-control px-1 text-center input-transparente  rounded-0"
+
+								id="calculakin-sincronario-dia" tabindex="5" type="number" min="0" max="28" value="17">
+
+							<button class="btn btn-primary btn-sm" type="button"><i class="fa fa-chevron-right"></i></button>
+
+						</div>
+
+					</div>
+
+					<div id="infos-lua" class="mb-3">
+
+						<span id="dia-fora-do-tempo">Dia Fora do Tempo</span>
+
+						<span id="dia-hunab-ku"><img width="32" src="https://rotalunar.com.br/wp-content/themes/rota/images/hunab-ku.svg" alt="Hunab Ku"> Hunab Ku <small>(Não possui Kin - exibindo o próximo)</small></span>
+
+						<span class="grupo-plasma">
+
+							<svg width="32" height="32" id="img-plasma">
+
+								<use href="https://rotalunar.com.br/wp-content/themes/rota/images/plasmas.svg"></use>
+
+							</svg>
+
+							<span>Plasma:</span> <span id="plasma">Dali</span></span>
+            
+            
+            
+
+						<span class="grupo-totem"><img id="img-totem" class="ml-2 pr-1" width="32"
+
+								src="https://rotalunar.com.br/wp-content/themes/rota/images/totens-circulos/1.png">
+
+							<span>Totem:</span> <span id="totem">Morcego</span></span>
+            
+            
+
+            
+						<span class="grupo-lua">
+
+							<svg id="img-lua" class="ml-2 pr-1" width="43" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+								<use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-artisticos.svg"></use>
+
+							</svg>
+
+							<span id="lua">Lua do Propósito</span>
+
+						</span>
+
+					</div>
+
+					<label class="label-input-kin mr-1 isPortal" for="calculakin-kin"><img
+
+							src="https://rotalunar.com.br/wp-content/themes/rota/images/simbolo-tzolkin.svg">KIN</label>
+
+					<input class="form-control seletor-input-kin text-center isPortal" id="calculakin-kin" min="-1"
+
+						max="261" type="number"><button class="btn btn-primary btn-sm btn-calculakin-kin"
+
+						type="button"><i class="fa fa-chevron-right"></i></button>
+
+						<br class="d-sm-none">
+
+						<a id="btn-detalhes-do-kin" class="btn btn-purple-dark btn-sm ml-2 mt-3 mt-sm-0 mb-0 mb-sm-2">Detalhes do Kin</a>
+
+					<ul id="seletorkin-btns-navegacao">
+
+						<li class="first"><a data-nav-kin="-260" href="#">260</a></li>
+
+						<li class="before"><a data-nav-kin="-52" href="#">52</a></li>
+
+						<li class="before"><a data-nav-kin="-28" href="#">28</a></li>
+
+						<li class="before"><a data-nav-kin="-20" href="#">20</a></li>
+
+						<li class="before"><a data-nav-kin="-13" href="#">13</a></li>
+
+						<li class="before"><a data-nav-kin="-7" href="#">7</a></li>
+
+						<li class="before"><a data-nav-kin="-1" href="#">1</a></li>
+
+						<li class="middle"></li>
+
+						<li class="after"><a data-nav-kin="1" href="#">1</a></li>
+
+						<li class="after"><a data-nav-kin="7" href="#">7</a></li>
+
+						<li class="after"><a data-nav-kin="13" href="#">13</a></li>
+
+						<li class="after"><a data-nav-kin="20" href="#">20</a></li>
+
+						<li class="after"><a data-nav-kin="28" href="#">28</a></li>
+
+						<li class="after"><a data-nav-kin="52" href="#">52</a></li>
+
+						<li class="last"><a data-nav-kin="260" href="#">260</a></li>
+
+					</ul>
+
+					<h2 id="kin_nome" class="h5 mt-3 text-center"></h2>
+
+					<div id="calculakin-seletor-kin" class="circularSlider container-seletor-kin">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8" style="transform: translate(-50%, -48%);" id="seletor-kin-img-selo">
+
+                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                        </svg>
+
+                        <svg style="transform: translate(-50%, -48%);" id="seletor-kin-img-tom">
+
+                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                        </svg>						
+
+					</div>
+
+					<p class="text-center">Gire os seletores de <strong class="cor-tom">tom</strong>, <strong
+
+							class="cor-selo">selo</strong> e <strong class="cor-kin">kin</strong></p>
+
+				</div>
+
+				<div class="col-lg-6">
+
+					<ul class="border border-primary mb-4 mt-3 mx-auto nav nav-pills nav-toggle rounded w-fit">
+
+						<li class="nav-item"><a href="calculakin-poema" data-group="calculakin-dados-do-kin"
+
+								class="nav-link active">Kin</a></li>
+
+						<li id="nav-link-tzolkin" class="nav-item"><a href="calculakin-tzolkin"
+
+								data-group="calculakin-dados-do-kin" class="nav-link">Tzolkin</a></li>
+
+						<li class="nav-item"><a href="calculakin-13-luas" data-group="calculakin-dados-do-kin"
+
+								class="nav-link">13 Luas</a></li>
+
+					</ul>
+
+					<div id="calculakin-dados-do-kin">
+
+						<div id="calculakin-poema" class="">
+
+							<div id="kin_poema_completo">
+
+                                <p id="kin_poema" class="text-center mb-0 mt-n3"></p>
+
+                            </div>
+
+							<div id="calculakin-oraculo" class="h-100 oraculo mx-auto mb-4">
+
+								<h5 class="text-center font-weight-bold border-purple-dark text-center text-primary">
+
+									Oráculo do Destino</h5>
+
+								<div class="oraculo-kins">
+
+									<a href="#" id="calculakin-kin-destino" class="kin kin-destino kin-ativo">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin kin-guia">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin kin-analogo">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin kin-oculto">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin kin-antipoda">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+								</div>
+
+							</div>
+
+							<div id="calculakin-onda" class="mb-4 mx-auto">
+
+								<h5 class="text-center font-weight-bold border-purple-dark text-center text-primary">
+
+									<a class="text-underline" id="calculakin-link-onda" href="#">
+
+										Onda Encantada <span class="onda-numero"></span><br /><span
+
+										class="onda-nome h6"></span>
+
+									</a></h5>
+
+								<div class="onda-kins">
+
+									<a href="#" class="kin onda-magnetico">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-lunar">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-eletrico">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-autoexistente">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-harmonico">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-ritmico">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-ressonante">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-galactico">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-solar">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-planetario">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-espectral">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-cristal">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+									<a href="#" class="kin onda-cosmico">
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</a>
+
+								</div>
+
+							</div>
+
+							<div id="calculakin-complementar" class="pb-2">
+
+								<div id="calculakin-crono-psi" class="flex-grow-1">
+
+									<h5 class="h6 font-weight-bold">Crono-Psi</h5>
+
+									<div class="d-flex justify-content-center">
+
+                                        <span class="crono-psi-dft d-none">---</span>
+
+										<div href="#" class="kin">
+
+                                            <svg width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                                <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg"></use>
+
+                                            </svg>
+
+                                            <svg width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                                <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                            </svg>											
+
+										</div>
+
+										<div class="float-right ml-2">kin<br /><span class="crono-psi-numero">212</span>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div id="calculakin-familia" class="flex-grow-1">
+
+									<h5 class="h6 font-weight-bold">Família Central</h5>
+
+									<div class="pt-1">
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</div>
+
+								</div>
+
+								<div id="calculakin-cla" class="flex-grow-1">
+
+									<h5 class="h6 font-weight-bold">Clã da Verdade</h5>
+
+									<div class="pt-1">
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+										<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.1 107.8">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg"></use>
+
+                                        </svg>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div id="calculakin-tzolkin" class="text-center d-none pb-2">
+
+							<div class="form-inline justify-content-center mb-2 mt-n2">
+
+								<label class="mr-2">Visualização: </label><select
+
+									class="form-control input-transparente text-center" id="tzolkin-visualizacoes">
+
+									<option selected="selected" value="">Tzolkin</option>
+
+									<option value="ondas">Onda Encantada</option>
+
+									<option value="celulas">Células do Tempo</option>
+
+									<option value="cromaticas">Cromáticas</option>
+
+									<option value="castelos">Castelos</option>
+
+									<option value="estacoes">Estações</option>
+
+								</select>
+
+							</div>
+
+							<div id="tzolkin">
+
+								<div id="t-tons"></div>
+
+								<div id="t-selos"></div>
+
+								<div id="t-kins"></div>
+
+							</div>
+
+						</div>
+
+                        <div id="calculakin-13-luas" class="d-none">
+
+                            <div id="sincronario-infos-lua" class="mb-4 text-center">
+
+								<img width="114" id="img-totem-grande" class="mb-3 rounded-circle mr-sm-3" src="https://rotalunar.com.br/wp-content/themes/rota/images/totens-circulos/1.png">
+
+                                <h2 class="h5 mb-0 nome-lua"></h2>
+
+								<p class="periodo-gregoriano"></p>
+
+                            </div>
+
+                            <div class="sincronario-dft text-center d-none">
+
+                                <img src="https://rotalunar.com.br/wp-content/themes/rota/images/dia-fora-do-tempo.png" alt="Dia Fora do Tempo">
+
+                            </div>
+
+							<div class="dia-hunab-ku text-center d-none">
+
+                                <img width="225" src="https://rotalunar.com.br/wp-content/themes/rota/images/hunab-ku.svg" alt="Hunab Ku">
+
+                            </div>
+
+                            <div class="text-center sincronario mb-3">
+
+                                
+                                
+                                    <div class="plasma">
+                                      
+                                      <span class="plasma-dali"><img id="img-dali" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/DALI.svg?v=1678379581">
+
+							</span>
+                                      <br/>
+
+                                    DALI
+                                </div>
+
+                                
+                                    <div class="plasma">
+
+                                    <span class="plasma-seli"><img id="img-seli" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/SELI.svg?v=1678379580">
+
+							</span>
+
+                                    <br/>                                
+
+                                    SELI
+                                </div>
+
+                                
+                                    <div class="plasma">
+
+                                    <span class="plasma-dali"><img id="img-dali" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/GAMA.svg?v=1678379581">
+
+							</span>
+
+                                    <br/>                                
+
+                                    GAMA
+                                </div>
+
+                                
+                                    <div class="plasma">
+
+                                    <span class="plasma-dali"><img id="img-dali" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/KALI.svg?v=1678379581">
+
+							</span>
+
+                                    <br/>                                
+
+                                    KALI
+                                </div>
+
+                                
+                                    <div class="plasma">
+
+                                    <span class="plasma-dali"><img id="img-dali" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/ALFA.svg?v=1678379581">
+
+							</span>
+
+                                    <br/>                                
+
+                                    ALFA
+                                </div>
+
+                                
+                                    <div class="plasma">
+
+                                    <span class="plasma-dali"><img id="img-dali" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/LIMI.svg?v=1678379581">
+
+							</span>
+
+                                    <br/>                                
+
+                                    LIMI
+                                </div>
+
+                                
+                                    <div class="plasma">
+
+                                    <span class="plasma-dali"><img id="img-dali" class="ml-2 pr-1" width="40"
+
+								src="https://cdn.shopify.com/s/files/1/0709/8728/4761/files/SILIO.svg?v=1678379581">
+
+							</span>
+
+                                    <br/>                                
+
+                                    SÍLIO
+                                </div>
+
+                                
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">01</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">02</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">03</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">04</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">05</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">06</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">07</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">08</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">09</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">10</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">11</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">12</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">13</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">14</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">15</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">16</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">17</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">18</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">19</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">20</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">21</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">22</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">23</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">24</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">25</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">26</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">27</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                                <div class="dia">                                
+
+                                    <span class="dia-sincronario">28</span>
+
+                                    <span class="dia-gregoriano">22/05</span>                                
+
+                                    <span class="kin-numero">KIN<br/><span class="numero-kin">123</span></span>
+
+                                    <div class="kin">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.7 80.3">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/tons-classicos.svg#1"></use>
+
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.7 83.1">
+
+                                            <use href="https://rotalunar.com.br/wp-content/themes/rota/images/selos-classicos.svg#1"></use>                                    
+
+                                        </svg>
+
+                                    </div>                                
+
+                                </div>
+
+                                
+                            </div>
+
+                        </div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="rleg1"></div>
+
+	</div>
+
+</div>
+  <script src='https://rotalunar.com.br/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7' id='regenerator-runtime-js'></script>
+<script src='https://rotalunar.com.br/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script id='contact-form-7-js-extra'>
+var wpcf7 = {"api":{"root":"https:\/\/rotalunar.com.br\/wp-json\/","namespace":"contact-form-7\/v1"}};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2' id='contact-form-7-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.5.7.2' id='jquery-blockui-js'></script>
+<script id='wc-add-to-cart-js-extra'>
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Ver carrinho","cart_url":"https:\/\/rotalunar.com.br\/carrinho\/","is_cart":"","cart_redirect_after_add":"yes"};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=5.7.2' id='wc-add-to-cart-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.5.7.2' id='js-cookie-js'></script>
+<script id='woocommerce-js-extra'>
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","currency":"BRL"};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=5.7.2' id='woocommerce-js'></script>
+<script id='wc-cart-fragments-js-extra'>
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_56c50775fd9d761128a4ebf4901a17fe","fragment_name":"wc_fragments_56c50775fd9d761128a4ebf4901a17fe","request_timeout":"5000"};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.7.2' id='wc-cart-fragments-js'></script>
+<script id='awdr-main-js-extra'>
+var awdr_params = {"ajaxurl":"https:\/\/rotalunar.com.br\/wp-admin\/admin-ajax.php","nonce":"25ac556a01","enable_update_price_with_qty":"show_when_matched","refresh_order_review":"0","custom_target_simple_product":"","custom_target_variable_product":"","js_init_trigger":"","awdr_opacity_to_bulk_table":"","awdr_dynamic_bulk_table_status":"0","awdr_dynamic_bulk_table_off":"on","custom_simple_product_id_selector":"","custom_variable_product_id_selector":""};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woo-discount-rules/v2/Assets/Js/site_main.js?ver=2.5.0' id='awdr-main-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woo-discount-rules/v2/Assets/Js/awdr-dynamic-price.js?ver=2.5.0' id='awdr-dynamic-price-js'></script>
+<script id='woobt-frontend-js-extra'>
+var woobt_vars = {"ajax_url":"https:\/\/rotalunar.com.br\/wp-admin\/admin-ajax.php","add_to_cart_button":"main","position":"before","change_image":"yes","change_price":"yes","price_selector":".summary > .price","this_item":"no","counter":"individual","variation_selector":"default","price_format":"%1$s%2$s","price_suffix":"","price_decimals":"2","price_thousand_separator":".","price_decimal_separator":",","currency_symbol":"R$","additional_price_text":"Valor em itens adicionais:","total_price_text":"Total:","add_to_cart":"Add to cart","alert_selection":"Please select a purchasable variation for [name] before adding this product to the cart."};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woo-bought-together/assets/js/frontend.js?ver=4.2.0' id='woobt-frontend-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woo-fly-cart/assets/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js?ver=4.1.4' id='perfect-scrollbar-js'></script>
+<script id='woofc-frontend-js-extra'>
+var woofc_vars = {"ajaxurl":"https:\/\/rotalunar.com.br\/wp-admin\/admin-ajax.php","nonce":"e259a68a9c","scrollbar":"yes","auto_show":"yes","undo_remove":"yes","undo_text":"Desfazer?","removed_text":"%s foi removido.","manual_show":"","reload":"no","cart_url":"","hide_count_empty":"no","is_rtl":""};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woo-fly-cart/assets/js/frontend.js?ver=4.1.4' id='woofc-frontend-js'></script>
+<script src='https://rotalunar.com.br/wp-content/themes/rota/src/js/keymaster.js?ver=1.6.3' id='keymaster-js'></script>
+<script src='https://rotalunar.com.br/wp-content/themes/rota/src/js/anime.min.js?ver=2.3.1' id='animejs-js'></script>
+<script src='https://rotalunar.com.br/wp-content/themes/rota/src/js/jquery.magnific-popup.min.js?ver=2.3.1.1.0' id='magnific-popup-js'></script>
+<script src='https://rotalunar.com.br/wp-content/themes/rota/js/theme.min.js?ver=0.9.4.1648217208' id='understrap-scripts-js'></script>
+<script src='https://rotalunar.com.br/wp-includes/js/comment-reply.min.js?ver=5.8.6' id='comment-reply-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/wpc-variations-radio-buttons/assets/libs/ddslick/jquery.ddslick.min.js?ver=2.5.3' id='ddslick-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/woocommerce/assets/js/select2/select2.full.min.js?ver=4.0.3-wc.5.7.2' id='select2-js'></script>
+<script src='https://rotalunar.com.br/wp-content/plugins/wpc-variations-radio-buttons/assets/js/frontend.js?ver=2.5.3' id='woovr-frontend-js'></script>
+<script src='https://rotalunar.com.br/wp-includes/js/wp-embed.min.js?ver=5.8.6' id='wp-embed-js'></script>
+<script id='aepc-pixel-events-js-extra'>
+var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_status":"not_logged_in","post_type":"kin","object_id":2879,"object_type":"single"}}]},"api":{"root":"https:\/\/rotalunar.com.br\/wp-json\/","nonce":"3e289f3957"}};
+</script>
+<script src='https://rotalunar.com.br/wp-content/plugins/pixel-caffeine/build/frontend.js?ver=2.3.3' id='aepc-pixel-events-js'></script>
+<script type="text/javascript">
+	var slicewp_ajaxurl = "https://rotalunar.com.br/wp-admin/admin-ajax.php";
+	var slicewp = {
+		cookie_duration   		: "30",
+		affiliate_credit  		: "last",
+		affiliate_keyword 		: "multiplicador"
+	};
+</script>
+			
+	
+			</body>
+
+</html>
